@@ -73,7 +73,10 @@ jobs:
         with:
           project: TD
           issuetype: ${{ steps.determine.outputs.issuetype }}
-          summary: '${{ github.event.issue.title }}'
+          summary: >
+            ${{ startsWith(github.repository, 'Two-Gether/Twogether-frontend') && '[FE]' || 
+                 startsWith(github.repository, 'Two-Gether/Twogether-backend') && '[BE]' || '' }} 
+            ${{ github.event.issue.title }}
           description: '${{ steps.md2jira.outputs.output-text }}'
           fields: |
             {
