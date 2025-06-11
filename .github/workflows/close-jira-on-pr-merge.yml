@@ -39,7 +39,7 @@ jobs:
             -H "Accept: application/json" \
             "${{ secrets.JIRA_BASE_URL }}/rest/api/3/issue/${{ env.JIRA_KEY }}/transitions")
 
-          TRANSITION_ID=$(echo "$RESPONSE" | jq -r '.transitions[] | select(.name=="완료") | .id')
+          TRANSITION_ID=$(echo "$RESPONSE" | jq -r '.transitions[] | select(.name=="병합") | .id')
           if [[ -z "$TRANSITION_ID" ]]; then
             echo "⚠️ No '완료' transition found. Available:"
             echo "$RESPONSE" | jq -r '.transitions[].name'
