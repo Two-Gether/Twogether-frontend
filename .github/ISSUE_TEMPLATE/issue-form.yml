@@ -34,7 +34,6 @@ body:
       label: '✅ 체크리스트(Tasks)'
       description: '해당 이슈에 대해 필요한 작업 목록을 작성해주세요 (항목을 자유롭게 추가하거나 수정할 수 있습니다)'
       value: |
-        - [ ] Task 1
-        - [ ] Task 2
+        - [ ] 해야 할 일 1
     validations:
       required: true
