@@ -1,7 +1,7 @@
 ## 🔥 관련 이슈
 
 - Jira 이슈: [TD-1](https://yeoro-dev.atlassian.net/browse/TD-1)
-
+- Github: closed #이슈번호
 <br/>
 
 ## 📝 변경사항
