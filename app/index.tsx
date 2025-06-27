@@ -1,18 +1,21 @@
-// app/index.tsx
-import { View, Text, Button, StyleSheet } from 'react-native';
-import { router } from 'expo-router';
+import { useRouter } from 'expo-router';
+import { useEffect } from 'react';
+import { View, ActivityIndicator } from 'react-native';
 
-export default function HomeScreen() {
+export default function Index() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.replace('/login');
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>👋 투게더에 오신 걸 환영합니다!</Text>
-      <Button title="프로필 보기" onPress={() => router.push('/profile')} />
-      <Button title="여행 목록으로 이동" onPress={() => router.push('/trip')} />
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <ActivityIndicator size="large" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  title: { fontSize: 20, marginBottom: 20 },
-});
