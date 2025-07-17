@@ -6,7 +6,13 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['GowunDodum-Regular', 'system-ui', 'sans-serif'],
+        'gowun': ['GowunDodum-Regular', 'system-ui', 'sans-serif'],
+        'catways': ['Catways', 'system-ui', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

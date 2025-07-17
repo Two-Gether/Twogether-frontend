@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Catways.ttf",
+      "sha1": "7c69eaf1011f08e626f8557cec8b7f961513d7ee"
+    },
+    {
+      "path": "src/assets/fonts/GowunDodum-Regular.ttf",
+      "sha1": "847dceef1abac41c09bd0001f37838e6a38be537"
+    }
+  ]
+}

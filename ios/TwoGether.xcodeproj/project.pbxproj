@@ -12,6 +12,8 @@
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		F25E8AA16D4135002A5E2015 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		F806FC7D74E34510A9C48AC1 /* Catways.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52495BEBA84B498BA5E46003 /* Catways.ttf */; };
+		051367C7C9DB428F8B48C101 /* GowunDodum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BE54E88A434F238E73B653 /* GowunDodum-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TwoGether/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TwoGether/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		52495BEBA84B498BA5E46003 /* Catways.ttf */ = {isa = PBXFileReference; name = "Catways.ttf"; path = "../src/assets/fonts/Catways.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E6BE54E88A434F238E73B653 /* GowunDodum-Regular.ttf */ = {isa = PBXFileReference; name = "GowunDodum-Regular.ttf"; path = "../src/assets/fonts/GowunDodum-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				D8C125405A0C4B7E8786322E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -97,6 +102,16 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		D8C125405A0C4B7E8786322E /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				52495BEBA84B498BA5E46003 /* Catways.ttf */,
+				E6BE54E88A434F238E73B653 /* GowunDodum-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -161,6 +176,8 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				F25E8AA16D4135002A5E2015 /* PrivacyInfo.xcprivacy in Resources */,
+				F806FC7D74E34510A9C48AC1 /* Catways.ttf in Resources */,
+				051367C7C9DB428F8B48C101 /* GowunDodum-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

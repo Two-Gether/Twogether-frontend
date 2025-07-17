@@ -1,53 +1,41 @@
-import { View, Text, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import { colors, typography, spacing, layout } from '../theme';
 
 const MainScreen = () => {
     return (
-        <SafeAreaView className="flex-1 bg-white">
-            <ScrollView className="flex-1">
-                <View className="px-6 py-4">
+        <SafeAreaView style={styles.container}>
+            <ScrollView style={styles.scrollView}>
+                <View style={styles.content}>
                     {/* Header */}
-                    <View className="flex-row justify-between items-center mb-6">
-                        <Text className="text-lg font-semibold text-gray-800">TWOGETHER</Text>
-                        <View className="flex-row space-x-4">
-                            <Text className="text-lg">🔔</Text>
-                            <Text className="text-lg">🔍</Text>
+                    <View style={styles.header}>
+                        <Text style={styles.headerTitle}>TWOGETHER</Text>
+                        <View style={styles.headerIcons}>
+                            <Text style={styles.icon}>🔔</Text>
+                            <Text style={styles.icon}>🔍</Text>
                         </View>
                     </View>
 
                     {/* Main Content */}
-                    <View className="mb-8">
-                        <Text className="text-xl text-gray-700 mb-2">
-                            우리가 함께한 지
+                    <View style={styles.mainContent}>
+                        <Text style={styles.subtitle}>
+                            우리가 함께한 지 350일이 지났어요!
                         </Text>
-                        <Text className="text-3xl font-bold text-red-500 mb-4">
-                            350일이 지났어요!
-                        </Text>
-
-                        {/* Cat Illustration Placeholder */}
-                        <View className="flex-row justify-center items-center mb-6">
-                            <View className="w-16 h-16 bg-gray-200 rounded-full mr-4 items-center justify-center">
-                                <Text className="text-2xl">🐱</Text>
-                            </View>
-                            <View className="w-12 h-12 bg-gray-200 rounded-full items-center justify-center">
-                                <Text className="text-xl">🐱</Text>
-                            </View>
-                        </View>
                     </View>
 
                     {/* Recommendation Section */}
-                    <View>
-                        <Text className="text-lg font-semibold text-gray-800 mb-4">
+                    <View style={styles.recommendationSection}>
+                        <Text style={styles.sectionTitle}>
                             대충 놀만한 것 추천 리스트
                         </Text>
 
                         {/* Recommendation Item */}
-                        <View className="flex-row items-center mb-4">
-                            <View className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full items-center justify-center mr-3">
-                                <Text className="text-white font-bold text-lg">H</Text>
+                        <View style={styles.recommendationItem}>
+                            <View style={styles.recommendationIcon}>
+                                <Text style={styles.iconText}>H</Text>
                             </View>
-                            <View className="flex-1">
-                                <Text className="text-gray-700 font-medium">추천 활동</Text>
-                                <Text className="text-gray-500 text-sm">함께 즐길 수 있는 활동</Text>
+                            <View style={styles.recommendationContent}>
+                                <Text style={styles.recommendationTitle}>추천 활동</Text>
+                                <Text style={styles.recommendationSubtitle}>함께 즐길 수 있는 활동</Text>
                             </View>
                         </View>
                     </View>
@@ -56,5 +44,128 @@ const MainScreen = () => {
         </SafeAreaView>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: colors.grayscale[700],
+    },
+    scrollView: {
+        flex: 1,
+    },
+    content: {
+        paddingHorizontal: layout.screenPadding.horizontal,
+        paddingVertical: layout.screenPadding.vertical,
+    },
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: spacing[6],
+    },
+    headerTitle: {
+        fontSize: typography.fontSize.lg,
+        fontWeight: '600' as const,
+        color: colors.grayscale[100],
+        fontFamily: typography.fontFamily.logo,
+    },
+    headerIcons: {
+        flexDirection: 'row',
+        gap: spacing[4],
+    },
+    icon: {
+        fontSize: typography.fontSize.lg,
+    },
+    mainContent: {
+        marginBottom: spacing[8],
+    },
+    subtitle: {
+        fontSize: typography.fontSize.xl,
+        color: colors.grayscale[200],
+        marginBottom: spacing[2],
+        fontFamily: typography.fontFamily.base,
+    },
+    title: {
+        fontSize: typography.fontSize['3xl'],
+        fontWeight: '700' as const,
+        color: colors.brand.primary,
+        marginBottom: spacing[4],
+        fontFamily: typography.fontFamily.base,
+    },
+    catContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: spacing[6],
+    },
+    cat1: {
+        width: spacing[16],
+        height: spacing[16],
+        backgroundColor: colors.grayscale[400],
+        borderRadius: layout.borderRadius.full,
+        marginRight: spacing[4],
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    cat2: {
+        width: spacing[12],
+        height: spacing[12],
+        backgroundColor: colors.grayscale[400],
+        borderRadius: layout.borderRadius.full,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    catEmoji: {
+        fontSize: typography.fontSize['2xl'],
+        fontFamily: typography.fontFamily.base,
+    },
+    catEmoji2: {
+        fontSize: typography.fontSize.xl,
+        fontFamily: typography.fontFamily.base,
+    },
+    recommendationSection: {
+        // 추가 스타일...
+    },
+    sectionTitle: {
+        fontSize: typography.fontSize.lg,
+        fontWeight: '600' as const,
+        color: colors.grayscale[100],
+        marginBottom: spacing[4],
+        fontFamily: typography.fontFamily.base,
+    },
+    recommendationItem: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: spacing[4],
+    },
+    recommendationIcon: {
+        width: spacing[12],
+        height: spacing[12],
+        backgroundColor: colors.brand.primary,
+        borderRadius: layout.borderRadius.full,
+        marginRight: spacing[3],
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    iconText: {
+        color: colors.grayscale[700],
+        fontWeight: '700' as const,
+        fontSize: typography.fontSize.lg,
+        fontFamily: typography.fontFamily.base,
+    },
+    recommendationContent: {
+        flex: 1,
+    },
+    recommendationTitle: {
+        color: colors.grayscale[100],
+        fontWeight: '500' as const,
+        fontFamily: typography.fontFamily.base,
+    },
+    recommendationSubtitle: {
+        color: colors.grayscale[300],
+        fontSize: typography.fontSize.sm,
+        fontFamily: typography.fontFamily.base,
+    },
+});
 
 export default MainScreen; 
