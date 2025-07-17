@@ -9,7 +9,6 @@ export const images = {
         event: require('./images/icons/event.png'),
         calendar: require('./images/icons/calendar.png'),
         profile: require('./images/icons/profile.png'),
-        // 추가 아이콘들...
     },
 
     // 로고들
@@ -38,8 +37,6 @@ export const images = {
 export const fonts = {
     // Gowun Dodum 폰트들
     gowunDodumRegular: require('./fonts/GowunDodum-Regular.ttf'),
-    // gowunDodumMedium: require('./fonts/GowunDodum-Medium.ttf'), // Medium 버전이 없으면 주석 처리
-    // gowunDodumBold: require('./fonts/GowunDodum-Bold.ttf'), // Bold 버전이 없으면 주석 처리
 
     // Catways Font (로고용)
     catwaysFont: require('./fonts/Catways.ttf'),
