@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import SvgIcon from './icons/SvgIcon';
+import SvgIcon from './icons/Icon';
 
 import MainScreen from '../screens/MainScreen';
 import MapScreen from '../screens/MapScreen';
@@ -13,15 +13,15 @@ const BottomTabBar = () => {
     return (
         <Tab.Navigator
             screenOptions={{
-                tabBarActiveTintColor: '#3B82F6',
-                tabBarInactiveTintColor: '#9CA3AF',
+                tabBarActiveTintColor: '#FF6B81',
+                tabBarInactiveTintColor: '#767676',
                 tabBarStyle: {
                     backgroundColor: '#FFFFFF',
                     borderTopWidth: 1,
                     borderTopColor: '#E5E7EB',
-                    paddingBottom: 5,
+                    paddingBottom: 20,
                     paddingTop: 5,
-                    height: 60,
+                    height: 80,
                 },
                 headerShown: false,
             }}

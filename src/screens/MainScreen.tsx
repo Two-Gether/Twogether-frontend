@@ -15,6 +15,7 @@ const MainScreen = () => {
                         </View>
                     </View>
 
+
                     {/* Main Content */}
                     <View style={styles.mainContent}>
                         <Text style={styles.subtitle}>
