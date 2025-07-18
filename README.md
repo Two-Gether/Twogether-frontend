@@ -1,97 +1,79 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# TwoGether
 
-# Getting Started
+React Native 기반의 커플 앱입니다.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 아이콘 관리
 
-## Step 1: Start Metro
+### SVG 아이콘 추가하기
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+1. SVG 파일을 `src/assets/images/` 폴더에 추가:
+   - `common/` - 공통 아이콘들
+   - `icons/` - 특정 기능 아이콘들
+   - `navigation/` - 네비게이션 아이콘들
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+2. 아이콘 생성 스크립트 실행:
+   ```bash
+   npm run generate-icons
+   ```
+   - SVG 파일들이 `generated/icons.ts`로 자동 변환됩니다
+   - `generated/` 폴더는 .gitignore에 포함되어 Git에서 제외됩니다
 
-```sh
-# Using npm
-npm start
+3. 컴포넌트에서 사용:
+   ```typescript
+   import SvgIcon from '../components/icons/SvgIcon';
+   
+   <SvgIcon name="search" width={24} height={24} color="#3B82F6" />
+   ```
 
-# OR using Yarn
-yarn start
+### 프로젝트 구조
+
+```
+src/
+├── assets/
+│   ├── images/          # 원본 SVG 파일들 (소스)
+│   │   ├── common/
+│   │   ├── icons/
+│   │   └── navigation/
+│   └── fonts/           # 폰트 파일들
+├── components/
+│   └── icons/           # SVG 아이콘 컴포넌트들
+└── ...
+
+generated/                # 자동 생성된 파일들 (Git 제외)
+└── icons.ts             # SVG → TypeScript 변환 결과
+
+scripts/
+└── generate-icons.js    # 아이콘 생성 도구
 ```
 
-## Step 2: Build and run your app
+### 사용 가능한 아이콘들
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- **Navigation**: home, map, calendar, my, place
+- **Common**: search, close, menu, plus, like, unlike, share, share-sm, arrowTop, pw_open, pw_close, myPosition, waypoint
+- **Icons**: store
 
-### Android
+## 개발 환경 설정
 
-```sh
-# Using npm
-npm run android
+```bash
+# 의존성 설치
+npm install
 
-# OR using Yarn
-yarn android
-```
+# 아이콘 생성 (SVG 파일 추가 후)
+npm run generate-icons
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+# iOS 시뮬레이터 실행
 npm run ios
 
-# OR using Yarn
-yarn ios
+# Android 에뮬레이터 실행
+npm run android
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 폰트 설정
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+앱에서는 다음 폰트를 사용합니다:
+- **Gowun Dodum**: 기본 텍스트
+- **Catways**: 로고 텍스트
 
-## Step 3: Modify your app
+## 색상 팔레트
 
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+브랜드 색상과 그레이스케일 색상이 정의되어 있습니다. `src/theme/colors.ts`에서 확인할 수 있습니다.

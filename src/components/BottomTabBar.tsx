@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Map, Calendar, User, Heart } from 'lucide-react-native';
+import SvgIcon from './icons/SvgIcon';
 
 import MainScreen from '../screens/MainScreen';
 import MapScreen from '../screens/MapScreen';
@@ -32,7 +32,7 @@ const BottomTabBar = () => {
                 options={{
                     tabBarLabel: '메인',
                     tabBarIcon: ({ color, size }) => (
-                        <Home size={size} color={color} />
+                        <SvgIcon name="home" width={size} height={size} color={color} />
                     ),
                 }}
             />
@@ -42,7 +42,7 @@ const BottomTabBar = () => {
                 options={{
                     tabBarLabel: '지도',
                     tabBarIcon: ({ color, size }) => (
-                        <Map size={size} color={color} />
+                        <SvgIcon name="map" width={size} height={size} color={color} />
                     ),
                 }}
             />
@@ -52,7 +52,7 @@ const BottomTabBar = () => {
                 options={{
                     tabBarLabel: '행사',
                     tabBarIcon: ({ color, size }) => (
-                        <Heart size={size} color={color} />
+                        <SvgIcon name="place" width={size} height={size} color={color} />
                     ),
                 }}
             />
@@ -62,7 +62,7 @@ const BottomTabBar = () => {
                 options={{
                     tabBarLabel: '달력',
                     tabBarIcon: ({ color, size }) => (
-                        <Calendar size={size} color={color} />
+                        <SvgIcon name="calendar" width={size} height={size} color={color} />
                     ),
                 }}
             />
@@ -72,7 +72,7 @@ const BottomTabBar = () => {
                 options={{
                     tabBarLabel: '마이',
                     tabBarIcon: ({ color, size }) => (
-                        <User size={size} color={color} />
+                        <SvgIcon name="my" width={size} height={size} color={color} />
                     ),
                 }}
             />
