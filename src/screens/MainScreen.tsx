@@ -1,14 +1,19 @@
-import { View, Text, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { colors, typography, spacing, layout } from '../theme';
 
-const MainScreen = () => {
+const MainScreen = ({ navigation }: { navigation: any }) => {
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView style={styles.scrollView}>
                 <View style={styles.content}>
                     {/* Header */}
                     <View style={styles.header}>
-                        <Text style={styles.headerTitle}>TWOGETHER</Text>
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('Login')}
+                            style={{ padding: 8 }}
+                        >
+                            <Text style={styles.headerTitle}>TWOGETHER</Text>
+                        </TouchableOpacity>
                         <View style={styles.headerIcons}>
                             <Text style={styles.icon}>🔔</Text>
                             <Text style={styles.icon}>🔍</Text>

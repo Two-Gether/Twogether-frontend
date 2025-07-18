@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, SafeAreaView, Alert } from 'react-native';
 import { colors, typography } from '../theme';
 import SvgIcon from '../components/icons/Icon';
+import { useLogin, useSocialLogin } from '../hooks/useAuth';
 
 interface LoginScreenProps {
     navigation: any;
@@ -9,6 +10,56 @@ interface LoginScreenProps {
 
 const LoginScreen = ({ navigation }: LoginScreenProps) => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const loginMutation = useLogin();
+    const socialLoginMutation = useSocialLogin();
+
+    const handleLogin = () => {
+        if (!email || !password) {
+            Alert.alert('알림', '이메일과 비밀번호를 입력해주세요.');
+            return;
+        }
+
+        loginMutation.mutate(
+            { email, password },
+            {
+                onSuccess: () => {
+                    navigation.navigate('MainApp');
+                },
+                onError: (error) => {
+                    Alert.alert('로그인 실패', error.message);
+                },
+            }
+        );
+    };
+
+    const handleSocialLogin = (provider: 'naver' | 'kakao' | 'apple' | 'google') => {
+        // 실제로는 각 소셜 로그인 SDK를 사용해야 함
+        const mockToken = `mock_${provider}_token`;
+        const mockUserInfo = {
+            id: `user_${provider}_123`,
+            email: `user@${provider}.com`,
+            name: `${provider} 사용자`,
+        };
+
+        socialLoginMutation.mutate(
+            {
+                provider,
+                token: mockToken,
+                userInfo: mockUserInfo,
+            },
+            {
+                onSuccess: () => {
+                    navigation.navigate('MainApp');
+                },
+                onError: (error) => {
+                    Alert.alert('소셜 로그인 실패', error.message);
+                },
+            }
+        );
+    };
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: colors.grayscale[700] }}>
@@ -43,8 +94,12 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                                 fontWeight: '400',
                                 lineHeight: 20
                             }}
-                            placeholder="아이디를 입력해주세요"
+                            placeholder="이메일을 입력해주세요"
                             placeholderTextColor={colors.grayscale[300]}
+                            value={email}
+                            onChangeText={setEmail}
+                            keyboardType="email-address"
+                            autoCapitalize="none"
                         />
                     </View>
 
@@ -73,13 +128,16 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                             placeholder="비밀번호를 입력해주세요"
                             placeholderTextColor={colors.grayscale[300]}
                             secureTextEntry={!isPasswordVisible}
+                            value={password}
+                            onChangeText={setPassword}
+                            autoCapitalize="none"
                         />
                         <TouchableOpacity
                             onPress={() => setIsPasswordVisible(!isPasswordVisible)}
                             style={{ padding: 4 }}
                         >
                             <SvgIcon
-                                name={isPasswordVisible ? "pw_close" : "pw_open"}
+                                name={isPasswordVisible ? "pw_open" : "pw_close"}
                                 width={20}
                                 height={20}
                                 color={colors.grayscale[300]}
@@ -96,8 +154,10 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                             borderRadius: 8,
                             justifyContent: 'center',
                             alignItems: 'center',
+                            opacity: loginMutation.isPending ? 0.6 : 1,
                         }}
-                        onPress={() => navigation.navigate('MainApp')}
+                        onPress={handleLogin}
+                        disabled={loginMutation.isPending}
                     >
                         <Text style={{
                             color: colors.grayscale[700],
@@ -106,7 +166,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                             fontWeight: '400',
                             lineHeight: 33.6
                         }}>
-                            로그인
+                            {loginMutation.isPending ? '로그인 중...' : '로그인'}
                         </Text>
                     </TouchableOpacity>
 
@@ -179,22 +239,34 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                         gap: 20
                     }}>
                         {/* 네이버 */}
-                        <TouchableOpacity onPress={() => console.log('네이버 로그인')}>
+                        <TouchableOpacity
+                            onPress={() => handleSocialLogin('naver')}
+                            disabled={socialLoginMutation.isPending}
+                        >
                             <SvgIcon name="naver-logo" width={48} height={48} color="#03C75A" />
                         </TouchableOpacity>
 
                         {/* 카카오톡 */}
-                        <TouchableOpacity onPress={() => console.log('카카오 로그인')}>
+                        <TouchableOpacity
+                            onPress={() => handleSocialLogin('kakao')}
+                            disabled={socialLoginMutation.isPending}
+                        >
                             <SvgIcon name="kakao-logo" width={48} height={48} color="#FEE500" />
                         </TouchableOpacity>
 
                         {/* Apple */}
-                        <TouchableOpacity onPress={() => console.log('애플 로그인')}>
+                        <TouchableOpacity
+                            onPress={() => handleSocialLogin('apple')}
+                            disabled={socialLoginMutation.isPending}
+                        >
                             <SvgIcon name="apple-logo" width={48} height={48} color="black" />
                         </TouchableOpacity>
 
                         {/* Google */}
-                        <TouchableOpacity onPress={() => console.log('구글 로그인')}>
+                        <TouchableOpacity
+                            onPress={() => handleSocialLogin('google')}
+                            disabled={socialLoginMutation.isPending}
+                        >
                             <SvgIcon name="google-logo" width={48} height={48} color="black" />
                         </TouchableOpacity>
                     </View>
