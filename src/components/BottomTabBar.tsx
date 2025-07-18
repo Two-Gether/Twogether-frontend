@@ -17,11 +17,9 @@ const BottomTabBar = () => {
                 tabBarInactiveTintColor: '#767676',
                 tabBarStyle: {
                     backgroundColor: '#FFFFFF',
-                    borderTopWidth: 1,
-                    borderTopColor: '#E5E7EB',
-                    paddingBottom: 20,
-                    paddingTop: 5,
-                    height: 80,
+                    paddingBottom: 15,
+                    paddingTop: 10,
+                    height: 70,
                 },
                 headerShown: false,
             }}
@@ -30,7 +28,7 @@ const BottomTabBar = () => {
                 name="Main"
                 component={MainScreen}
                 options={{
-                    tabBarLabel: '메인',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <SvgIcon name="home" width={size} height={size} color={color} />
                     ),
@@ -40,7 +38,7 @@ const BottomTabBar = () => {
                 name="Map"
                 component={MapScreen}
                 options={{
-                    tabBarLabel: '지도',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <SvgIcon name="map" width={size} height={size} color={color} />
                     ),
@@ -50,7 +48,7 @@ const BottomTabBar = () => {
                 name="Event"
                 component={EventScreen}
                 options={{
-                    tabBarLabel: '행사',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <SvgIcon name="place" width={size} height={size} color={color} />
                     ),
@@ -60,7 +58,7 @@ const BottomTabBar = () => {
                 name="Calendar"
                 component={CalendarScreen}
                 options={{
-                    tabBarLabel: '달력',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <SvgIcon name="calendar" width={size} height={size} color={color} />
                     ),
@@ -70,7 +68,7 @@ const BottomTabBar = () => {
                 name="Profile"
                 component={ProfileScreen}
                 options={{
-                    tabBarLabel: '마이',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <SvgIcon name="my" width={size} height={size} color={color} />
                     ),

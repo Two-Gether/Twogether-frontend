@@ -18,7 +18,11 @@ const Icon: React.FC<IconProps> = ({ name, width = 24, height = 24, color }) => 
 
     let modifiedXml = xml;
 
-    if (color) {
+    // 소셜 로고 아이콘들은 색상을 변경하지 않음
+    const socialLogos = ['naver-logo', 'kakao-logo', 'apple-logo', 'google-logo'];
+    const isSocialLogo = socialLogos.includes(name);
+
+    if (color && !isSocialLogo) {
         // currentColor를 실제 색상으로 변경
         modifiedXml = modifiedXml.replace(/currentColor/g, color);
 

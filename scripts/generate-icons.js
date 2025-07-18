@@ -8,6 +8,9 @@ function generateIcons() {
 
     const icons = {};
 
+    // 소셜 로고 아이콘들은 색상을 변경하지 않음
+    const socialLogos = ['naver-logo', 'kakao-logo', 'apple-logo', 'google-logo'];
+
     // 각 폴더에서 SVG 파일들을 읽기
     const folders = ['common', 'icons', 'navigation'];
 
@@ -24,10 +27,15 @@ function generateIcons() {
                     // 파일명에서 확장자 제거하여 키 생성
                     const key = file.replace('.svg', '');
 
-                    // stroke와 fill 색상을 currentColor로 변경하여 동적 색상 지원
-                    const modifiedContent = content
-                        .replace(/stroke="[^"]*"/g, 'stroke="currentColor"')
-                        .replace(/fill="[^"]*"/g, 'fill="currentColor"');
+                    let modifiedContent = content;
+
+                    // 소셜 로고가 아닌 경우에만 currentColor로 변경
+                    if (!socialLogos.includes(key)) {
+                        // stroke와 fill 색상을 currentColor로 변경하여 동적 색상 지원
+                        modifiedContent = content
+                            .replace(/stroke="[^"]*"/g, 'stroke="currentColor"')
+                            .replace(/fill="[^"]*"/g, 'fill="currentColor"');
+                    }
 
                     icons[key] = modifiedContent;
                 }
