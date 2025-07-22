@@ -1,4 +1,5 @@
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import SvgIcon from '../../../shared/components/icons/Icon';
 
 const MainScreen = ({ navigation }: { navigation: any }) => {
     return (
@@ -13,16 +14,15 @@ const MainScreen = ({ navigation }: { navigation: any }) => {
                         >
                             <Text className="text-lg font-semibold text-gray-700 font-catways">TWOGETHER</Text>
                         </TouchableOpacity>
-                        <View className="flex-row gap-4">
-                            <Text className="text-lg">🔔</Text>
-                            <Text className="text-lg">🔍</Text>
+                        <View className="flex-row">
+                            <SvgIcon name="search" width={24} height={24} color="#767676" />
                         </View>
                     </View>
 
                     {/* Main Content */}
                     <View className="mb-8">
                         <Text className="text-xl text-gray-600 mb-2 font-gowun">
-                            우리가 함께한 지 350일이 지났어요!
+                            우리가 연애한 지 350일 째
                         </Text>
                     </View>
 
