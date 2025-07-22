@@ -1,6 +1,6 @@
-// src/components/icons/Icon.tsx
+// src/shared/components/icons/Icon.tsx
 import { SvgXml } from 'react-native-svg';
-import { icons, IconName } from '../../../generated/icons';
+import { icons, IconName } from '../../../../generated/icons';
 
 interface IconProps {
     name: IconName;

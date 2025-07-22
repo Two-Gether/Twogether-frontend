@@ -1,9 +1,10 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import LoginScreen from '../screens/LoginScreen';
-import SignupScreen from '../screens/SignupScreen';
-import BottomTabBar from '../components/BottomTabBar';
+import LoginScreen from '../features/auth/screens/LoginScreen';
+import SignupScreen from '../features/auth/screens/SignupScreen';
+import BottomTabBar from '../shared/components/BottomTabBar';
 
 // 네비게이션 타입 정의
 type RootStackParamList = {
@@ -13,6 +14,7 @@ type RootStackParamList = {
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator(); // This Tab is for BottomTabBar, not used directly here anymore
 
 const AppNavigator = () => {
     return (
