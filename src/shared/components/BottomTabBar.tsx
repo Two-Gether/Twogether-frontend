@@ -1,11 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SvgIcon from './icons/Icon';
 
-import MainScreen from '../screens/MainScreen';
-import MapScreen from '../screens/MapScreen';
-import EventScreen from '../screens/EventScreen';
-import CalendarScreen from '../screens/CalendarScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+import MainScreen from '../../features/main/screens/MainScreen';
+import MapScreen from '../../features/map/screens/MapScreen';
+import EventScreen from '../../features/event/screens/EventScreen';
+import CalendarScreen from '../../features/calendar/screens/CalendarScreen';
+import ProfileScreen from '../../features/profile/screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,9 +17,11 @@ const BottomTabBar = () => {
                 tabBarInactiveTintColor: '#767676',
                 tabBarStyle: {
                     backgroundColor: '#FFFFFF',
-                    paddingBottom: 15,
-                    paddingTop: 10,
-                    height: 70,
+                    borderTopWidth: 1,
+                    borderTopColor: '#E5E7EB',
+                    paddingBottom: 20,
+                    paddingTop: 5,
+                    height: 80,
                 },
                 headerShown: false,
             }}
