@@ -20,7 +20,7 @@ const Icon: React.FC<IconProps> = ({ name, width = 24, height = 24, color }) => 
 
     // 소셜 로고 아이콘들은 색상을 변경하지 않음
     const socialLogos = ['naver-logo', 'kakao-logo', 'apple-logo', 'google-logo'];
-    const outlineIcons = ['home', 'map', 'place', 'calendar', 'my'];
+    const outlineIcons = ['home', 'map', 'place', 'calendar', 'my', 'pw_open', 'pw_close'];
     const isSocialLogo = socialLogos.includes(name);
     const isOutlineIcon = outlineIcons.includes(name);
 

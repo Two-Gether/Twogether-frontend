@@ -31,6 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     return true
   }
+
+  // 카카오 로그인을 위한 URL 스킴 처리
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    if url.absoluteString.hasPrefix("kakao") {
+      return true
+    }
+    return false
+  }
 }
 
 class ReactNativeDelegate: RCTDefaultReactNativeFactoryDelegate {

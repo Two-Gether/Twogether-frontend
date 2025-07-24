@@ -1,7 +1,7 @@
 // 공통 API 설정 및 유틸리티
 
 // API 기본 설정
-export const API_BASE_URL = 'https://api.twogether.com'; // 실제 URL로 변경 필요
+export const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8080'; // 로컬 개발 환경
 
 // API 응답 타입
 export interface ApiResponse<T = any> {
@@ -46,6 +46,8 @@ export const apiRequest = async <T>(
     url: string,
     options: RequestInit = {}
 ): Promise<T> => {
+    const fullUrl = `${API_BASE_URL}${url}`;
+
     const headers = await getAuthHeaders();
 
     const config: RequestInit = {
@@ -57,15 +59,17 @@ export const apiRequest = async <T>(
     };
 
     try {
-        const response = await fetch(`${API_BASE_URL}${url}`, config);
+        const response = await fetch(fullUrl, config);
 
         if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
             throw new Error(errorData.message || `HTTP ${response.status}`);
         }
 
-        return await response.json();
+        const responseData = await response.json();
+        return responseData;
     } catch (error) {
+        console.error('API 요청 실패:', error);
         if (error instanceof Error) {
             throw error;
         }

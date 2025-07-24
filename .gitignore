@@ -19,6 +19,7 @@ ios/*.xcworkspace/
 ios/*.xcuserstate
 ios/*.xcscmblueprint
 ios/xcuserdata/
+ios/TwoGether/Info.plist
 
 # Android
 android/.gradle/

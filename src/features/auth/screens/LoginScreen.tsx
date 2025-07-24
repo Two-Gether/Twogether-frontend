@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, SafeAreaView, Alert, ScrollView } from 'react-native';
 import SvgIcon from '../../../shared/components/icons/Icon';
 import { useLogin, useSocialLogin } from '../hooks/useAuth';
+import { useKakaoLogin } from '../hooks/useKakaoAuth';
 
 interface LoginScreenProps {
     navigation: any;
@@ -14,6 +15,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
 
     const loginMutation = useLogin();
     const socialLoginMutation = useSocialLogin();
+    const kakaoLoginMutation = useKakaoLogin();
 
     const handleLogin = () => {
         if (!email || !password) {
@@ -34,30 +36,45 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
         );
     };
 
-    const handleSocialLogin = (provider: 'naver' | 'kakao' | 'apple' | 'google') => {
-        // 실제로는 각 소셜 로그인 SDK를 사용해야 함
-        const mockToken = `mock_${provider}_token`;
-        const mockUserInfo = {
-            id: `user_${provider}_123`,
-            email: `user@${provider}.com`,
-            name: `${provider} 사용자`,
-        };
-
-        socialLoginMutation.mutate(
-            {
-                provider,
-                token: mockToken,
-                userInfo: mockUserInfo,
+    const handleKakaoLogin = () => {
+        kakaoLoginMutation.mutate(undefined, {
+            onSuccess: (data) => {
+                navigation.navigate('MainApp');
             },
-            {
-                onSuccess: () => {
-                    navigation.navigate('MainApp');
+            onError: (error) => {
+                Alert.alert('카카오 로그인 실패', error.message);
+            },
+        });
+    };
+
+    const handleSocialLogin = (provider: 'naver' | 'kakao' | 'apple' | 'google') => {
+        if (provider === 'kakao') {
+            handleKakaoLogin();
+        } else {
+            // 실제로는 각 소셜 로그인 SDK를 사용해야 함
+            const mockToken = `mock_${provider}_token`;
+            const mockUserInfo = {
+                id: `user_${provider}_123`,
+                email: `user@${provider}.com`,
+                name: `${provider} 사용자`,
+            };
+
+            socialLoginMutation.mutate(
+                {
+                    provider,
+                    token: mockToken,
+                    userInfo: mockUserInfo,
                 },
-                onError: (error) => {
-                    Alert.alert('소셜 로그인 실패', error.message);
-                },
-            }
-        );
+                {
+                    onSuccess: () => {
+                        navigation.navigate('MainApp');
+                    },
+                    onError: (error) => {
+                        Alert.alert('소셜 로그인 실패', error.message);
+                    },
+                }
+            );
+        }
     };
 
     const handleSignup = () => {
@@ -68,7 +85,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
     return (
         <SafeAreaView className="flex-1 bg-gray-100">
             <ScrollView className="flex-1" contentContainerStyle={{ flexGrow: 1 }}>
-                <View className="flex-1 justify-start items-center px-6 pt-20 pb-10">
+                <View className="flex-1 justify-start items-center px-6 pt-20 pb-10 mt-28">
                     <Text className="text-2xl font-normal text-gray-700 mb-8 font-gowun">
                         로그인
                     </Text>
@@ -82,8 +99,6 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                                 placeholderTextColor="#767676"
                                 value={email}
                                 onChangeText={setEmail}
-                                keyboardType="email-address"
-                                autoCapitalize="none"
                             />
                         </View>
 
@@ -93,9 +108,9 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                                 className="flex-1 text-gray-300 text-sm font-gowun font-normal leading-5"
                                 placeholder="비밀번호를 입력해주세요"
                                 placeholderTextColor="#767676"
-                                secureTextEntry={!isPasswordVisible}
                                 value={password}
                                 onChangeText={setPassword}
+                                secureTextEntry={!isPasswordVisible}
                                 autoCapitalize="none"
                             />
                             <TouchableOpacity
@@ -144,7 +159,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                     </View>
 
                     {/* 간편 로그인 섹션 */}
-                    <View className="items-center w-full">
+                    <View className="items-center w-full mt-32">
                         <View className="flex-row items-center mb-6 w-full">
                             <View className="flex-1 h-px bg-gray-400" />
                             <Text className="mx-4 text-gray-500 font-gowun">
@@ -165,7 +180,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                             {/* 카카오톡 */}
                             <TouchableOpacity
                                 onPress={() => handleSocialLogin('kakao')}
-                                disabled={socialLoginMutation.isPending}
+                                disabled={kakaoLoginMutation.isPending}
                             >
                                 <SvgIcon name="kakao-logo" width={48} height={48} color="#FEE500" />
                             </TouchableOpacity>
