@@ -85,14 +85,14 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
     return (
         <SafeAreaView className="flex-1 bg-gray-100">
             <ScrollView className="flex-1" contentContainerStyle={{ flexGrow: 1 }}>
-                <View className="flex-1 justify-start items-center px-6 pt-20 pb-10 mt-28">
+                <View className="flex-1 justify-start items-center px-6 pt-20 pb-10 mt-48">
                     <Text className="text-2xl font-normal text-gray-700 mb-8 font-gowun">
                         로그인
                     </Text>
 
                     <View className="w-full gap-4 mb-8">
                         {/* 아이디 입력창 */}
-                        <View className="w-full h-14 px-4 bg-white rounded-lg border border-gray-500 justify-center">
+                        <View className="w-full h-14 px-4 bg-white rounded-lg border border-gray-300 justify-center">
                             <TextInput
                                 className="text-gray-300 text-sm font-gowun font-normal leading-5"
                                 placeholder="이메일을 입력해주세요"
@@ -103,7 +103,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                         </View>
 
                         {/* 비밀번호 입력창 */}
-                        <View className="w-full h-14 px-4 bg-white rounded-lg border border-gray-500 justify-between items-center flex-row">
+                        <View className="w-full h-14 px-4 bg-white rounded-lg border border-gray-300 justify-between items-center flex-row">
                             <TextInput
                                 className="flex-1 text-gray-300 text-sm font-gowun font-normal leading-5"
                                 placeholder="비밀번호를 입력해주세요"
@@ -159,7 +159,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
                     </View>
 
                     {/* 간편 로그인 섹션 */}
-                    <View className="items-center w-full mt-32">
+                    <View className="items-center w-full mt-20">
                         <View className="flex-row items-center mb-6 w-full">
                             <View className="flex-1 h-px bg-gray-400" />
                             <Text className="mx-4 text-gray-500 font-gowun">
