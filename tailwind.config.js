@@ -34,6 +34,7 @@ module.exports = {
           500: '#ff6b81',
           600: '#e64e66',
           700: '#cc3a52',
+          active: '#E63946',
         },
         // Sub Colors (Green)
         sub: {
