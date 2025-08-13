@@ -14,7 +14,7 @@ const MainScreen = ({ navigation }: { navigation: any }) => {
                             onPress={() => navigation.navigate('Login')}
                             className="p-2"
                         >
-                            <Text className="text-lg font-semibold text-gray-700 font-catways">TWOGETHER</Text>
+                            <Text className="text-xl text-gray-700 font-catways">TWOGETHER</Text>
                         </TouchableOpacity>
                         <View className="flex-row">
                             <SvgIcon name="search" width={24} height={24} color="#767676" />
