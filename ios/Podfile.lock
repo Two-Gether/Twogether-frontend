@@ -1665,6 +1665,10 @@ PODS:
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
     - SocketRocket
+  - react-native-geolocation-service (5.3.1):
+    - React
+  - react-native-kakao-maps (0.1.2):
+    - React
   - react-native-safe-area-context (5.4.0):
     - boost
     - DoubleConversion
@@ -2602,6 +2606,8 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
+  - react-native-geolocation-service (from `../node_modules/react-native-geolocation-service`)
+  - react-native-kakao-maps (from `../node_modules/react-native-kakao-maps`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
@@ -2734,6 +2740,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   React-microtasksnativemodule:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/microtasks"
+  react-native-geolocation-service:
+    :path: "../node_modules/react-native-geolocation-service"
+  react-native-kakao-maps:
+    :path: "../node_modules/react-native-kakao-maps"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-webview:
@@ -2857,6 +2867,8 @@ SPEC CHECKSUMS:
   React-logger: 984ebd897afad067555d081deaf03f57c4315723
   React-Mapbuffer: 0c045c844ce6d85cde53e85ab163294c6adad349
   React-microtasksnativemodule: d9499269ad1f484ae71319bac1d9231447f2094e
+  react-native-geolocation-service: 32b2c2a3b91e70ce2a8d0c684801aaeb0a07e0ec
+  react-native-kakao-maps: 1e8963364b6ad13d896406511b73fce43e934486
   react-native-safe-area-context: bd8e149c82b5a20cfd55e9775d82f1b5954b7e6d
   react-native-webview: 9a8ea59197aa76145b8ce72aa3eea69f1e89dd38
   React-NativeModulesApple: 983f3483ef0a3446b56d490f09d579fba2442e17
@@ -2897,6 +2909,6 @@ SPEC CHECKSUMS:
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: daa1e4de4b971b977b23bc842aaa3e135324f1f3
 
-PODFILE CHECKSUM: 615b5b52a2aff491780a0e1c59e4185a28811d29
+PODFILE CHECKSUM: b16fbb5b65ac2aa337f4207b3094fc4e245b1175
 
 COCOAPODS: 1.16.2

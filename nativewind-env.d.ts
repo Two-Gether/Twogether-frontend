@@ -24,6 +24,6 @@ declare module '*.svg' {
 }
 
 interface CustomFonts {
-    'font-gowun': string;
+    'font-gowun-batang': string;
     'font-catways': string;
 } 

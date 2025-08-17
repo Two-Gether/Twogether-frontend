@@ -43,7 +43,9 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string>현재 위치를 기반으로 지도를 표시하기 위해 위치 정보가 필요합니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>현재 위치를 기반으로 지도를 표시하기 위해 위치 정보가 필요합니다.</string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -62,9 +64,12 @@
 	<false/>
 	<key>KAKAO_APP_KEY</key>
 	<string>YOUR_KAKAO_APP_KEY_HERE</string>
+	<key>KAKAO_MAP_API_KEY</key>
+	<string>YOUR_KAKAO_MAP_API_KEY_HERE</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>GowunDodum-Regular.ttf</string>
+		<string>GowunBatang-Regular.ttf</string>
+		<string>GowunBatang-Bold.ttf</string>
 		<string>Catways.ttf</string>
 	</array>
 </dict>

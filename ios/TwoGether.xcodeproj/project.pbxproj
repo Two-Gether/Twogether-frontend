@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		051367C7C9DB428F8B48C101 /* GowunDodum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BE54E88A434F238E73B653 /* GowunDodum-Regular.ttf */; };
-		0C80B921A6F3F58F76C31292 /* libPods-TwoGether.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TwoGether.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C472E35860B8B582B1A19304 /* libPods-TwoGether.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CDDA5319DBE9E582C0F6FB /* libPods-TwoGether.a */; };
+		CB190F30622A4319B908CC53 /* GowunBatang-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD54130220364536AD4C3AAD /* GowunBatang-Bold.ttf */; };
+		E2B3AB0EE5404891BF027A85 /* GowunBatang-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46C6D8348BD44A6AE463521 /* GowunBatang-Regular.ttf */; };
 		F25E8AA16D4135002A5E2015 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		F806FC7D74E34510A9C48AC1 /* Catways.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52495BEBA84B498BA5E46003 /* Catways.ttf */; };
 /* End PBXBuildFile section */
@@ -21,14 +22,15 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TwoGether/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TwoGether/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = TwoGether/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-TwoGether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoGether.debug.xcconfig"; path = "Target Support Files/Pods-TwoGether/Pods-TwoGether.debug.xcconfig"; sourceTree = "<group>"; };
-		52495BEBA84B498BA5E46003 /* Catways.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Catways.ttf; path = ../src/assets/fonts/Catways.ttf; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-TwoGether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoGether.release.xcconfig"; path = "Target Support Files/Pods-TwoGether/Pods-TwoGether.release.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-TwoGether.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwoGether.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52495BEBA84B498BA5E46003 /* Catways.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Catways.ttf; path = ../src/assets/fonts/Catways.ttf; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TwoGether/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TwoGether/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E6BE54E88A434F238E73B653 /* GowunDodum-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GowunDodum-Regular.ttf"; path = "../src/assets/fonts/GowunDodum-Regular.ttf"; sourceTree = "<group>"; };
+		8EFB0AF244C10D4A125B0BA3 /* Pods-TwoGether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoGether.debug.xcconfig"; path = "Target Support Files/Pods-TwoGether/Pods-TwoGether.debug.xcconfig"; sourceTree = "<group>"; };
+		A46C6D8348BD44A6AE463521 /* GowunBatang-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GowunBatang-Regular.ttf"; path = "../src/assets/fonts/GowunBatang-Regular.ttf"; sourceTree = "<group>"; };
+		BD54130220364536AD4C3AAD /* GowunBatang-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GowunBatang-Bold.ttf"; path = "../src/assets/fonts/GowunBatang-Bold.ttf"; sourceTree = "<group>"; };
+		E7CDDA5319DBE9E582C0F6FB /* libPods-TwoGether.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TwoGether.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EE66FFFC2DD1570BC5B570E1 /* Pods-TwoGether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoGether.release.xcconfig"; path = "Target Support Files/Pods-TwoGether/Pods-TwoGether.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-TwoGether.a in Frameworks */,
+				C472E35860B8B582B1A19304 /* libPods-TwoGether.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-TwoGether.a */,
+				E7CDDA5319DBE9E582C0F6FB /* libPods-TwoGether.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,8 +99,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-TwoGether.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-TwoGether.release.xcconfig */,
+				8EFB0AF244C10D4A125B0BA3 /* Pods-TwoGether.debug.xcconfig */,
+				EE66FFFC2DD1570BC5B570E1 /* Pods-TwoGether.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -107,10 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				52495BEBA84B498BA5E46003 /* Catways.ttf */,
-				E6BE54E88A434F238E73B653 /* GowunDodum-Regular.ttf */,
+				BD54130220364536AD4C3AAD /* GowunBatang-Bold.ttf */,
+				A46C6D8348BD44A6AE463521 /* GowunBatang-Regular.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,13 +122,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TwoGether" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				B5CF553DC57718EC20EC5FDB /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				CD14B631EB9BE9B401FDFCCA /* [CP] Embed Pods Frameworks */,
+				7608F2B2AF72DC293C3AE1EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,7 +179,8 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				F25E8AA16D4135002A5E2015 /* PrivacyInfo.xcprivacy in Resources */,
 				F806FC7D74E34510A9C48AC1 /* Catways.ttf in Resources */,
-				051367C7C9DB428F8B48C101 /* GowunDodum-Regular.ttf in Resources */,
+				CB190F30622A4319B908CC53 /* GowunBatang-Bold.ttf in Resources */,
+				E2B3AB0EE5404891BF027A85 /* GowunBatang-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,24 +203,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		7608F2B2AF72DC293C3AE1EB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		B5CF553DC57718EC20EC5FDB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,21 +242,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		CD14B631EB9BE9B401FDFCCA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwoGether/Pods-TwoGether-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -272,7 +275,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-TwoGether.debug.xcconfig */;
+			baseConfigurationReference = 8EFB0AF244C10D4A125B0BA3 /* Pods-TwoGether.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -300,7 +303,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-TwoGether.release.xcconfig */;
+			baseConfigurationReference = EE66FFFC2DD1570BC5B570E1 /* Pods-TwoGether.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

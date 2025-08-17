@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['GowunDodum-Regular', 'sans-serif'],
-        'gowun': ['GowunDodum-Regular', 'sans-serif'],
+        'sans': ['GowunBatang-Regular', 'sans-serif'],
+        'gowun': ['GowunBatang-Regular', 'sans-serif'],
         'catways': ['Catways', 'sans-serif'],
       },
       colors: {

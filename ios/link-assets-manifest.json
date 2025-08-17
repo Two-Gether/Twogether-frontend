@@ -6,6 +6,14 @@
       "sha1": "7c69eaf1011f08e626f8557cec8b7f961513d7ee"
     },
     {
+      "path": "src/assets/fonts/GowunBatang-Bold.ttf",
+      "sha1": "dfed025bfc72669bae8c04a88c3d3e3bfcc052a7"
+    },
+    {
+      "path": "src/assets/fonts/GowunBatang-Regular.ttf",
+      "sha1": "69efbbd2c48a5e7e3e17adce70b40eb35158f8b1"
+    },
+    {
       "path": "src/assets/fonts/GowunDodum-Regular.ttf",
       "sha1": "847dceef1abac41c09bd0001f37838e6a38be537"
     }

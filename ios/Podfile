@@ -31,5 +31,13 @@ target 'TwoGether' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+    
+    # Fix for Swift module compatibility issues
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+        config.build_settings['DEFINES_MODULE'] = 'YES'
+      end
+    end
   end
 end
