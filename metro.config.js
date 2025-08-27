@@ -4,23 +4,24 @@ const { withNativeWind } = require("nativewind/metro");
 const defaultConfig = getDefaultConfig(__dirname);
 
 const config = mergeConfig(defaultConfig, {
-    resolver: {
-        alias: {
-            invariant: "invariant",
-        },
-        assetExts: defaultConfig.resolver.assetExts.filter(ext => ext !== "svg"),
-        sourceExts: [...defaultConfig.resolver.sourceExts, "svg"],
-        platforms: ['ios', 'android', 'native', 'web'],
+  resolver: {
+    alias: {
+      invariant: "invariant",
+      "@AppIcons": "./src/assets/AppIcons",
     },
-    transformer: {
-        babelTransformerPath: require.resolve("react-native-svg-transformer"),
-        getTransformOptions: async () => ({
-            transform: {
-                experimentalImportSupport: false,
-                inlineRequires: true,
-            },
-        }),
-    },
+    assetExts: defaultConfig.resolver.assetExts.filter(ext => ext !== "svg"),
+    sourceExts: [...defaultConfig.resolver.sourceExts, "svg"],
+    platforms: ['ios', 'android', 'native', 'web'],
+  },
+  transformer: {
+    babelTransformerPath: require.resolve("react-native-svg-transformer"),
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+    }),
+  },
 });
 
 const finalConfig = withNativeWind(config, { input: "./global.css" });
